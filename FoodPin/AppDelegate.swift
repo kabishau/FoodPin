@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  FoodPin
-//
-//  Created by Aleksey Kabishau on 0422..18.
-//  Copyright © 2018 Aleksey Kabishau. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
