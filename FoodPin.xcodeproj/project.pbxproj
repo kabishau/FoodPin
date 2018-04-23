@@ -12,6 +12,7 @@
 		D4C85573208D87B100C1195F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C85572208D87B100C1195F /* Assets.xcassets */; };
 		D4C85576208D87B100C1195F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C85574208D87B100C1195F /* LaunchScreen.storyboard */; };
 		D4C85581208D87B100C1195F /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C85580208D87B100C1195F /* FoodPinTests.swift */; };
+		D4C8558C208D8A6000C1195F /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		D4C8557C208D87B100C1195F /* FoodPinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C85580208D87B100C1195F /* FoodPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinTests.swift; sourceTree = "<group>"; };
 		D4C85582208D87B100C1195F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				D4C8556B208D87AE00C1195F /* AppDelegate.swift */,
 				D4C8556F208D87AE00C1195F /* Main.storyboard */,
+				D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */,
 				D4C85572208D87B100C1195F /* Assets.xcassets */,
 				D4C85574208D87B100C1195F /* LaunchScreen.storyboard */,
 				D4C85577208D87B100C1195F /* Info.plist */,
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C8558C208D8A6000C1195F /* RestaurantTableViewController.swift in Sources */,
 				D4C8556C208D87AE00C1195F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
