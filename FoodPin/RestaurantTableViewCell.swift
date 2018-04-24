@@ -9,7 +9,14 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var thumnailImageView: UIImageView!
+    
+    // making corners be rounded usin property observer which is called every time a property's value is set
+    @IBOutlet weak var thumnailImageView: UIImageView! {
+        didSet {
+            thumnailImageView.layer.cornerRadius = thumnailImageView.bounds.width / 2
+            thumnailImageView.clipsToBounds = true
+        }
+    }
     
 
     override func awakeFromNib() {
