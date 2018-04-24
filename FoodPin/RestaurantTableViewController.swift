@@ -56,9 +56,29 @@ class RestaurantTableViewController: UITableViewController {
         // create an option menu as an action sheet
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
         
-        // add actions to the menu
+        // add cancel to the menu
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         optionMenu.addAction(cancelAction)
+        
+        // add call action
+        
+        // creating completion handler for call action
+        let callActionHandler = { (action: UIAlertAction) -> Void in
+            // creating new alert controller
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later", preferredStyle: .alert)
+            // creating action
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            // adding action to alert controller
+            alertMessage.addAction(okAction)
+            // presenting alert controller
+            self.present(alertMessage, animated: true, completion: nil)
+            
+        }
+        
+        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+        
+        optionMenu.addAction(callAction)
+        
         
         // display the menu
         present(optionMenu, animated: true, completion: nil)
