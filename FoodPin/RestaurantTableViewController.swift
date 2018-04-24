@@ -12,6 +12,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited = Array(repeating: false, count: 21)
+    
     
 
     override func viewDidLoad() {
@@ -46,6 +48,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.thumnailImageView?.image = UIImage(named: restaurantImages[indexPath.row])
         
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+        
         return cell
     }
     
@@ -79,9 +83,26 @@ class RestaurantTableViewController: UITableViewController {
         
         optionMenu.addAction(callAction)
         
+        // add check-in action
+        let checkInAction = UIAlertAction(title: "Check In", style: .default) { (action: UIAlertAction) -> Void in
+            
+            // set the checkmark in case of check in selected
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            
+            // updating the value in the array
+            self.restaurantIsVisited[indexPath.row] = true
+            
+        }
+        
+        optionMenu.addAction(checkInAction)
+        
         
         // display the menu
         present(optionMenu, animated: true, completion: nil)
+        
+        // deselect the row
+        tableView.deselectRow(at: indexPath, animated: false)
         
     }
     
