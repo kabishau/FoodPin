@@ -33,11 +33,13 @@ class RestaurantTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIndetifier = "Cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath)
-
-        cell.textLabel?.text = restaurants[indexPath.row]
+        
+        // downcasting to Restaurant Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath) as! RestaurantTableViewCell
+        
+        cell.nameLabel.text = restaurants[indexPath.row]
         cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
-
+        
         return cell
     }
     
