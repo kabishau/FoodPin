@@ -85,35 +85,18 @@ class RestaurantTableViewController: UITableViewController {
         
         // add check-in action
         
+        let checkActionTitle = (restaurantIsVisited[indexPath.row]) ? "Undo Check-in" : "Check-in"
         
-        if restaurantIsVisited[indexPath.row] {
-            let checkOutAction = UIAlertAction(title: "Check Out", style: .default) { (action: UIAlertAction) -> Void in
-                
-                // set the checkmark in case of check in selected
-                let cell = tableView.cellForRow(at: indexPath)
-                cell?.accessoryType = .none
-                
-                // updating the value in the array
-                self.restaurantIsVisited[indexPath.row] = false
-            }
+        let checkAction = UIAlertAction(title: checkActionTitle, style: .default) { (action: UIAlertAction) in
             
-            optionMenu.addAction(checkOutAction)
+            let cell = tableView.cellForRow(at: indexPath)
             
-        } else {
-            let checkInAction = UIAlertAction(title: "Check In", style: .default) { (action: UIAlertAction) -> Void in
-                
-                // set the checkmark in case of check in selected
-                let cell = tableView.cellForRow(at: indexPath)
-                cell?.accessoryType = .checkmark
-                
-                // updating the value in the array
-                self.restaurantIsVisited[indexPath.row] = true
-            }
+            cell?.accessoryType = (self.restaurantIsVisited[indexPath.row]) ? .none : .checkmark
             
-            optionMenu.addAction(checkInAction)
+            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
         }
         
-        //optionMenu.addAction(checkInAction)
+        optionMenu.addAction(checkAction)
         
         
         // display the menu
