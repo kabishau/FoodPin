@@ -4,7 +4,7 @@ class RestaurantTableViewController: UITableViewController {
     
     //MARK: Properties
     
-    var restaurants: [String] = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
+    var restaurantNames: [String] = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
     var restaurantImages = ["cafedeadend.jpg", "homei.jpg", "teakha.jpg", "cafeloisl.jpg", "petiteoyster.jpg", "forkeerestaurant.jpg", "posatelier.jpg", "bourkestreetbakery.jpg", "haighschocolate.jpg", "palominoespresso.jpg", "upstate.jpg", "traif.jpg", "grahamavenuemeats.jpg", "wafflewolf.jpg", "fiveleaves.jpg", "cafelore.jpg", "confessional.jpg", "barrafina.jpg", "donostia.jpg", "royaloak.jpg", "caskpubkitchen.jpg"]
     
@@ -33,7 +33,7 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count
+        return restaurantNames.count
     }
 
     
@@ -43,7 +43,7 @@ class RestaurantTableViewController: UITableViewController {
         // downcasting to Restaurant Cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath) as! RestaurantTableViewCell
         
-        cell.nameLabel.text = restaurants[indexPath.row]
+        cell.nameLabel.text = restaurantNames[indexPath.row]
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.thumnailImageView?.image = UIImage(named: restaurantImages[indexPath.row])
@@ -120,7 +120,7 @@ class RestaurantTableViewController: UITableViewController {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
             
-            self.restaurants.remove(at: indexPath.row)
+            self.restaurantNames.remove(at: indexPath.row)
             self.restaurantLocations.remove(at: indexPath.row)
             self.restaurantTypes.remove(at: indexPath.row)
             self.restaurantImages.remove(at: indexPath.row)
@@ -132,7 +132,18 @@ class RestaurantTableViewController: UITableViewController {
             completionHandler(true)
         }
         
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
+            
+            let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            
+            let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            
+            self.present(activityController, animated: true, completion: nil)
+            
+            completionHandler(true)
+        }
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
         
         return swipeConfiguration
     }
