@@ -14,10 +14,14 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantIsVisited = Array(repeating: false, count: 21)
     
+    //MARK: Methods
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // large title for the navigation bar
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
