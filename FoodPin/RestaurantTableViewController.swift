@@ -162,6 +162,50 @@ class RestaurantTableViewController: UITableViewController {
         
         return swipeConfiguration
     }
+    
+    // right swipe implementation - check-in and undo check-in options
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let checkInAction = UIContextualAction(style: .normal, title: "Check In") { (action, sourceView, completionHandler) in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            self.restaurantIsVisited[indexPath.row] = true
+            
+            completionHandler(true)
+        }
+        
+        // check-in customization
+        checkInAction.backgroundColor = UIColor(red: 72/255, green: 177/255, blue: 100/255, alpha: 1.0)
+        checkInAction.image = UIImage(named: "tick")
+        
+        
+        let undoCheckInAction = UIContextualAction(style: .normal, title: "Undo") { (action, sourceView, completionHandler) in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            self.restaurantIsVisited[indexPath.row] = false
+            
+            completionHandler(true)
+        }
+        
+        // undo customization
+        undoCheckInAction.backgroundColor = UIColor(red: 72/255, green: 177/255, blue: 100/255, alpha: 1.0)
+        undoCheckInAction.image = UIImage(named: "undo")
+        
+        //
+        let swipeConfiguration: UISwipeActionsConfiguration
+        
+        // displaying specific action of the right swipe depending on check-in status
+        if restaurantIsVisited[indexPath.row] {
+            swipeConfiguration = UISwipeActionsConfiguration(actions: [undoCheckInAction])
+        } else {
+            swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
+        }
+        
+        return swipeConfiguration
+    }
 
     
     /*
