@@ -14,6 +14,7 @@
 		D4C85581208D87B100C1195F /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C85580208D87B100C1195F /* FoodPinTests.swift */; };
 		D4C8558C208D8A6000C1195F /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */; };
 		D4C8558E208EC3E400C1195F /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8558D208EC3E400C1195F /* RestaurantTableViewCell.swift */; };
+		D4C855902092E71000C1195F /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8558F2092E71000C1195F /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D4C85582208D87B100C1195F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		D4C8558D208EC3E400C1195F /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		D4C8558F2092E71000C1195F /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D4C8556F208D87AE00C1195F /* Main.storyboard */,
 				D4C8558D208EC3E400C1195F /* RestaurantTableViewCell.swift */,
 				D4C8558B208D8A6000C1195F /* RestaurantTableViewController.swift */,
+				D4C8558F2092E71000C1195F /* RestaurantDetailViewController.swift */,
 				D4C85572208D87B100C1195F /* Assets.xcassets */,
 				D4C85574208D87B100C1195F /* LaunchScreen.storyboard */,
 				D4C85577208D87B100C1195F /* Info.plist */,
@@ -202,6 +205,7 @@
 			files = (
 				D4C8558C208D8A6000C1195F /* RestaurantTableViewController.swift in Sources */,
 				D4C8558E208EC3E400C1195F /* RestaurantTableViewCell.swift in Sources */,
+				D4C855902092E71000C1195F /* RestaurantDetailViewController.swift in Sources */,
 				D4C8556C208D87AE00C1195F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

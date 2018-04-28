@@ -74,7 +74,7 @@
                                     <outlet property="nameLabel" destination="LRn-lf-xzp" id="uvL-Zl-p3X"/>
                                     <outlet property="thumnailImageView" destination="tY2-gc-UBY" id="RfC-FF-5Qp"/>
                                     <outlet property="typeLabel" destination="wkS-ly-QYf" id="duX-UH-EfB"/>
-                                    <segue destination="R3b-yM-jsX" kind="show" id="y5N-Fk-THL"/>
+                                    <segue destination="R3b-yM-jsX" kind="show" identifier="showRestaurantDetail" id="y5N-Fk-THL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,20 +89,29 @@
             </objects>
             <point key="canvasLocation" x="990" y="213"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="DHH-oN-hoz">
             <objects>
-                <viewController id="R3b-yM-jsX" sceneMemberID="viewController">
+                <viewController id="R3b-yM-jsX" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E79-c9-Ej8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0lz-sS-Gik">
+                                <rect key="frame" x="16" y="74" width="343" height="311"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="T21-3l-QgM"/>
                     </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="0lz-sS-Gik" id="SuC-wI-NkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoi-Ru-EK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="213"/>
+            <point key="canvasLocation" x="1792.8" y="212.74362818590706"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96p-KA-qCS">
