@@ -6,13 +6,19 @@ class RestaurantDetailViewController: UIViewController {
     
     
     @IBOutlet weak var restaurantImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     var restaurantImageName = ""
+    var restaurantName = ""
+    var restaurantLocationName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         restaurantImageView.image = UIImage(named: restaurantImageName)
+        nameLabel.text = restaurantName
+        locationLabel.text = restaurantLocationName
     }
 
     
