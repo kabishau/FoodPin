@@ -28,7 +28,7 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", image: "caskpubkitchen", isVisited: false)
     ]
     
-    //MARK: Methods
+    //MARK: View Controller Life Cycle
     
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class RestaurantTableViewController: UITableViewController {
         }
     }
     
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
