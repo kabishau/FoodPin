@@ -100,7 +100,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kts-Du-qWh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="bFr-MD-VH6" userLabel="Header View">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="bFr-MD-VH6" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -146,6 +146,12 @@
                                         <constraint firstItem="JYb-el-WKq" firstAttribute="top" secondItem="bFr-MD-VH6" secondAttribute="topMargin" id="voO-gW-s83"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D5X-nj-MbD" secondAttribute="trailing" constant="50" id="vw9-R9-m7m"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="headerImageView" destination="JYb-el-WKq" id="TdS-sl-ocH"/>
+                                        <outlet property="heartImageView" destination="ac8-4X-q7B" id="1U8-Db-cgY"/>
+                                        <outlet property="nameLabel" destination="D5X-nj-MbD" id="cXM-B8-mj5"/>
+                                        <outlet property="typeLabel" destination="5ft-o3-BRG" id="xvn-wU-Vdc"/>
+                                    </connections>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Y8N-Sd-zxf">
