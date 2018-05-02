@@ -15,6 +15,12 @@ class RestaurantDetailHeaderView: UIView {
             typeLabel.layer.masksToBounds = true
         }
     }
-    @IBOutlet var heartImageView: UIImageView!
+    @IBOutlet var heartImageView: UIImageView! {
+        didSet {
+            // template mode allows to change original image color
+            heartImageView.image = UIImage(named: "heart-tick")?.withRenderingMode(.alwaysTemplate)
+            heartImageView.tintColor = .white
+        }
+    }
 
 }
