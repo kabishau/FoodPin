@@ -104,8 +104,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JYb-el-WKq" userLabel="Header Image View">
-                                            <rect key="frame" x="8" y="8" width="359" height="334"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JYb-el-WKq" userLabel="Header Image View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5X-nj-MbD" userLabel="Name Label">
                                             <rect key="frame" x="14" y="271" width="89" height="42"/>
@@ -136,15 +136,15 @@
                                     <constraints>
                                         <constraint firstItem="ac8-4X-q7B" firstAttribute="centerY" secondItem="5ft-o3-BRG" secondAttribute="centerY" id="27O-HG-4xf"/>
                                         <constraint firstItem="5ft-o3-BRG" firstAttribute="top" secondItem="D5X-nj-MbD" secondAttribute="bottom" constant="3" id="5Wk-Jl-Mhk"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="JYb-el-WKq" secondAttribute="trailing" id="7DB-Gm-NQx"/>
-                                        <constraint firstItem="JYb-el-WKq" firstAttribute="leading" secondItem="bFr-MD-VH6" secondAttribute="leadingMargin" id="Sd0-i8-ZHq"/>
+                                        <constraint firstAttribute="bottom" secondItem="JYb-el-WKq" secondAttribute="bottom" id="FFr-6A-sr6"/>
                                         <constraint firstItem="5ft-o3-BRG" firstAttribute="leading" secondItem="bFr-MD-VH6" secondAttribute="leading" constant="14" id="UfE-6a-fki"/>
                                         <constraint firstAttribute="bottom" secondItem="5ft-o3-BRG" secondAttribute="bottom" constant="14" id="Uzl-4a-Zfd"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="JYb-el-WKq" secondAttribute="bottom" id="WGQ-3J-J5J"/>
                                         <constraint firstItem="D5X-nj-MbD" firstAttribute="leading" secondItem="5ft-o3-BRG" secondAttribute="leading" id="WVu-s8-He9"/>
                                         <constraint firstItem="ac8-4X-q7B" firstAttribute="leading" secondItem="5ft-o3-BRG" secondAttribute="trailing" constant="8" id="ZGn-5d-aml"/>
-                                        <constraint firstItem="JYb-el-WKq" firstAttribute="top" secondItem="bFr-MD-VH6" secondAttribute="topMargin" id="voO-gW-s83"/>
+                                        <constraint firstItem="JYb-el-WKq" firstAttribute="top" secondItem="bFr-MD-VH6" secondAttribute="top" id="fmE-Hn-9e3"/>
+                                        <constraint firstItem="JYb-el-WKq" firstAttribute="leading" secondItem="bFr-MD-VH6" secondAttribute="leading" id="pFx-pR-2cd"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D5X-nj-MbD" secondAttribute="trailing" constant="50" id="vw9-R9-m7m"/>
+                                        <constraint firstAttribute="trailing" secondItem="JYb-el-WKq" secondAttribute="trailing" id="xgX-Uo-mSP"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerImageView" destination="JYb-el-WKq" id="TdS-sl-ocH"/>
