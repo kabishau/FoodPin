@@ -14,8 +14,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // makes navigation bar narrow
         navigationItem.largeTitleDisplayMode = .never
@@ -46,18 +46,18 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.iconImageView.image = UIImage(named: "phone")
             cell.shortTextLabel.text = restaurant.phone
             return cell
-        
+            
         case 1:
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-        cell.iconImageView.image = UIImage(named: "map")
-        cell.shortTextLabel.text = restaurant.location
-        return cell
-        
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
+            cell.iconImageView.image = UIImage(named: "map")
+            cell.shortTextLabel.text = restaurant.location
+            return cell
+            
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
             cell.descriptionLabel.text = restaurant.description
             return cell
-        
+            
         default:
             fatalError("Failed to instantiate the table view cell for detail view controller")
             
@@ -65,5 +65,5 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     
-
+    
 }
