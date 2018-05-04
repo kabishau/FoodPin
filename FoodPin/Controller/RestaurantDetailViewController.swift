@@ -17,6 +17,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         
+        // removing cell separator
+        tableView.separatorStyle = .none
+        
         // makes navigation bar narrow
         navigationItem.largeTitleDisplayMode = .never
         
