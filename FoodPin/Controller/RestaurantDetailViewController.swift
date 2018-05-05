@@ -9,16 +9,17 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant = Restaurant()
     
-    //MARK: Methods
+    //MARK: View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         // removing cell separator
         tableView.separatorStyle = .none
+        // this allow the header image cover navigation bar
+        tableView.contentInsetAdjustmentBehavior = .never
         
         // makes navigation bar narrow
         navigationItem.largeTitleDisplayMode = .never
@@ -28,6 +29,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        
+        // customizing navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
 
     }
     
