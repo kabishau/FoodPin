@@ -30,12 +30,19 @@ class RestaurantTableViewController: UITableViewController {
     
     //MARK: View Controller Life Cycle
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // large title for the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // to make the navigation bar transparent - setting these properties to the blank image
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // changing font color of navigation bar - in array the custom font can be include (needs to be check for nil)
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)]
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
