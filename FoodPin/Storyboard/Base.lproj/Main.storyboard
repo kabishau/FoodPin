@@ -83,7 +83,9 @@
                             <outlet property="delegate" destination="Lxc-zF-XPw" id="MbK-QJ-dtH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="tzt-S5-em0"/>
+                    <navigationItem key="navigationItem" title="Food Pin" id="tzt-S5-em0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="H0o-E1-Mlw"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18e-sN-PvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
