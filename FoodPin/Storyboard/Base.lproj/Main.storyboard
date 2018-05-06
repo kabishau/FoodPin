@@ -264,7 +264,7 @@
                                             <outlet property="titleLabel" destination="i9K-m0-9t8" id="8V2-Pe-u1H"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" rowHeight="215" id="g9x-m9-D3g" customClass="RestaurantDetailTextCell" customModule="FoodPin" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailMapCell" rowHeight="215" id="g9x-m9-D3g" customClass="RestaurantDetailMapCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="510" width="375" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g9x-m9-D3g" id="yWO-Qz-YLt">
@@ -285,6 +285,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="pqA-gP-eCK" secondAttribute="trailing" id="rOY-Sx-ELM"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="pqA-gP-eCK" id="D4V-vK-UAm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
