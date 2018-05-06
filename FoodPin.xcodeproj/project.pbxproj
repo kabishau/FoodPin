@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4139E6F209EA5E700177BA6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4139E6E209EA5E700177BA6 /* UIColor+Ext.swift */; };
+		D4139E71209EABA000177BA6 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4139E70209EABA000177BA6 /* UINavigationController+Ext.swift */; };
 		D48326CD209820DC0015FCA3 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48326CC209820DC0015FCA3 /* RestaurantDetailHeaderView.swift */; };
 		D48326CF20995DBF0015FCA3 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48326CE20995DBF0015FCA3 /* RestaurantDetailIconTextCell.swift */; };
 		D48326D1209967180015FCA3 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48326D0209967180015FCA3 /* RestaurantDetailTextCell.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		D4139E6E209EA5E700177BA6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		D4139E70209EABA000177BA6 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		D48326CC209820DC0015FCA3 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		D48326CE20995DBF0015FCA3 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		D48326D0209967180015FCA3 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D4139E6E209EA5E700177BA6 /* UIColor+Ext.swift */,
+				D4139E70209EABA000177BA6 /* UINavigationController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				D4C8558C208D8A6000C1195F /* RestaurantTableViewController.swift in Sources */,
 				D4C8558E208EC3E400C1195F /* RestaurantTableViewCell.swift in Sources */,
 				D48326CF20995DBF0015FCA3 /* RestaurantDetailIconTextCell.swift in Sources */,
+				D4139E71209EABA000177BA6 /* UINavigationController+Ext.swift in Sources */,
 				D4139E6F209EA5E700177BA6 /* UIColor+Ext.swift in Sources */,
 				D4C855902092E71000C1195F /* RestaurantDetailViewController.swift in Sources */,
 				D4C8556C208D87AE00C1195F /* AppDelegate.swift in Sources */,

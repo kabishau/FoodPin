@@ -9,6 +9,12 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant = Restaurant()
     
+    // overriding the property for the specific view controller (works with extension for UINavigationController
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    
     //MARK: View Controller Life Cycle
     
     override func viewDidLoad() {
