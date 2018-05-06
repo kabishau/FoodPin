@@ -96,11 +96,11 @@
             <objects>
                 <viewController id="R3b-yM-jsX" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E79-c9-Ej8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kts-Du-qWh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="bFr-MD-VH6" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -267,6 +267,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g9x-m9-D3g" id="yWO-Qz-YLt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-gP-eCK">
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="204.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="204.5" id="6WZ-MW-cpT"/>
+                                                    </constraints>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pqA-gP-eCK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yWO-Qz-YLt" secondAttribute="top" constant="10" id="Q4p-PT-OOp"/>
+                                                <constraint firstAttribute="bottom" secondItem="pqA-gP-eCK" secondAttribute="bottom" id="WxT-8k-gMe"/>
+                                                <constraint firstItem="pqA-gP-eCK" firstAttribute="leading" secondItem="yWO-Qz-YLt" secondAttribute="leading" id="jAI-ip-fU5"/>
+                                                <constraint firstAttribute="trailing" secondItem="pqA-gP-eCK" secondAttribute="trailing" id="rOY-Sx-ELM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -281,6 +295,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T21-3l-QgM"/>
                     </view>
+                    <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="headerView" destination="bFr-MD-VH6" id="7Ff-cc-tbc"/>
                         <outlet property="tableView" destination="Kts-Du-qWh" id="JPh-Su-8JV"/>
