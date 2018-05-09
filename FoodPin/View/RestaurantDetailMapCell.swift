@@ -28,6 +28,7 @@ class RestaurantDetailMapCell: UITableViewCell {
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
                     
+                    // in MapViewController annotation is added differently
                     self.mapView.addAnnotation(annotation)
                     
                     // set the zoom level
