@@ -34,6 +34,7 @@ class MapViewController: UIViewController {
                     // displaying the annotation
                     // using this method allows not to use "region" methods like in map view cell
                     self.mapView.showAnnotations([annotation], animated: true)
+                    // changing the state of annotation that makes it bigger
                     self.mapView.selectAnnotation(annotation, animated: true)
                 }
             }
