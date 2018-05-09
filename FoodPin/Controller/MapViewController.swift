@@ -1,6 +1,6 @@
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     //MARK: Properties
     
@@ -8,8 +8,36 @@ class MapViewController: UIViewController {
     
     var restaurant = Restaurant()
 
+    //MARK: Delegate Methods
+    
+    // this method is called every time when  map view need to display annotation
+    // without this method default annotation is displayed
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let indetifier = "MyMarker"
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
+        }
+        
+        // reuse the annotation if possible
+        var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: indetifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: indetifier)
+        }
+        
+        annotationView?.glyphText = "ok"
+        annotationView?.markerTintColor = UIColor.orange
+        
+        return annotationView
+        
+    }
+    
+    //MARK: View Controller Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
         
         // converting address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
