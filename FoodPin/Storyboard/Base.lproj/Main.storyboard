@@ -183,7 +183,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="F7G-dn-jl2" kind="presentation" identifier="showReview" id="zcI-o3-590"/>
+                                                <segue destination="F7G-dn-jl2" kind="presentation" identifier="showReview" modalTransitionStyle="crossDissolve" id="zcI-o3-590"/>
                                             </connections>
                                         </button>
                                     </subviews>
