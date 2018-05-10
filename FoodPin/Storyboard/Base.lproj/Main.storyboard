@@ -163,7 +163,7 @@
                                         <outlet property="typeLabel" destination="5ft-o3-BRG" id="xvn-wU-Vdc"/>
                                     </connections>
                                 </view>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="ytF-oZ-DzD">
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ytF-oZ-DzD" userLabel="Footer View">
                                     <rect key="frame" x="0.0" y="725" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -182,6 +182,9 @@
                                                     <integer key="value" value="25"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="F7G-dn-jl2" kind="presentation" identifier="showReview" id="zcI-o3-590"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="212"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="50I-0r-CC4">
             <objects>
-                <viewController id="F7G-dn-jl2" sceneMemberID="viewController">
+                <viewController id="F7G-dn-jl2" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pcI-lS-Sbc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,6 +402,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7hC-ku-YkD"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Bhv-mD-Edq" id="pr1-MR-Nze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bI-Vy-nEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
