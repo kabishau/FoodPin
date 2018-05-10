@@ -3,7 +3,10 @@ import UIKit
 class ReviewViewController: UIViewController {
     
     //MARK: Properties
+    
     @IBOutlet var backgroundImageView: UIImageView!
+    
+    @IBOutlet var rateButtons: [UIButton]!
     
     var restaurant = Restaurant()
 

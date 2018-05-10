@@ -407,6 +407,11 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="Bhv-mD-Edq" id="pr1-MR-Nze"/>
+                        <outletCollection property="rateButtons" destination="tfi-wt-MmE" collectionClass="NSMutableArray" id="yOa-pC-kOA"/>
+                        <outletCollection property="rateButtons" destination="s33-ED-Ehf" collectionClass="NSMutableArray" id="Pkf-kc-14t"/>
+                        <outletCollection property="rateButtons" destination="LB2-mf-xzv" collectionClass="NSMutableArray" id="mnr-FC-NGc"/>
+                        <outletCollection property="rateButtons" destination="PnE-Iv-wGD" collectionClass="NSMutableArray" id="GiF-RG-D8Z"/>
+                        <outletCollection property="rateButtons" destination="xyF-FF-MHi" collectionClass="NSMutableArray" id="eK4-le-JSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bI-Vy-nEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
