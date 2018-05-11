@@ -52,7 +52,7 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     
-    //MARK: Navigation?
+    //MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRestaurantDetail" {
@@ -62,6 +62,10 @@ class RestaurantTableViewController: UITableViewController {
                 destinationController.restaurant = restaurants[indexPath.row]
             }
         }
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Table View Data Source

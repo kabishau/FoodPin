@@ -85,6 +85,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Food Pin" id="tzt-S5-em0">
                         <barButtonItem key="backBarButtonItem" title=" " id="H0o-E1-Mlw"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="fhl-jw-njg">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="BHk-Iu-T0u" kind="presentation" identifier="addRestaurant" id="Ib0-mI-LGS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18e-sN-PvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -555,12 +561,20 @@
                             <outlet property="delegate" destination="gv2-rk-yJj" id="GbQ-RX-bDI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Restaurant" id="fnK-wh-hVq"/>
+                    <navigationItem key="navigationItem" title="New Restaurant" id="fnK-wh-hVq">
+                        <barButtonItem key="leftBarButtonItem" image="close" id="4uS-h1-7tO">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="YRl-DX-BQX" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="0yF-Z3-tHQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLS-Vw-7zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YRl-DX-BQX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="1092"/>
+            <point key="canvasLocation" x="1790" y="-679"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="50I-0r-CC4">
@@ -651,7 +665,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bI-Vy-nEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rqY-ht-i3D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="464.6176911544228"/>
+            <point key="canvasLocation" x="2665" y="466"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="oFt-i7-Knk">
@@ -680,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2y-9c-BnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2665" y="-315"/>
+            <point key="canvasLocation" x="2665" y="-224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96p-KA-qCS">
@@ -716,16 +730,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlH-3O-5uW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="1093"/>
+            <point key="canvasLocation" x="990" y="-679"/>
         </scene>
     </scenes>
     <resources>
         <image name="angry" width="78" height="103"/>
+        <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
         <image name="happy" width="78" height="86"/>
         <image name="love" width="78" height="82"/>
         <image name="photo" width="24" height="18"/>
+        <image name="plus" width="16" height="16"/>
         <image name="sad" width="78" height="87"/>
     </resources>
 </document>
