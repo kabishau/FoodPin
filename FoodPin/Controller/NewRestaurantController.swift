@@ -33,7 +33,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    @IBOutlet var descriptionTextView: RoundedTextField! {
+    @IBOutlet var descriptionTextView: UITextView! {
         didSet {
             descriptionTextView.tag = 5
             descriptionTextView.layer.cornerRadius = 5.0
