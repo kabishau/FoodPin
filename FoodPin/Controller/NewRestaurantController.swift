@@ -45,7 +45,15 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // not sure what it does in this case
+        navigationController?.navigationBar.tintColor = .white
+        // to make the navigation bar transparent - setting these properties to the blank image
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // changing font color of navigation bar - in array the custom font can be include
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60)]
+        
     }
     
     //MARK: Text Field Delegate Methods
