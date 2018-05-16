@@ -115,12 +115,27 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             photoImageView.image = selectedImage
-            //photoImageView.contentMode = .scaleAspectFill
-            //photoImageView.clipsToBounds = true
+            photoImageView.contentMode = .scaleAspectFill
+            photoImageView.clipsToBounds = true
         }
         
         // to dismiss image picker
         dismiss(animated: true, completion: nil)
+        
+        // programmatic layout constraints
+        let leadingConstraint = NSLayoutConstraint(item: photoImageView, attribute: .leading, relatedBy: .equal, toItem: photoImageView.superview, attribute: .leading, multiplier: 1, constant: 0)
+        leadingConstraint.isActive = true
+        
+        let trailingConstraint = NSLayoutConstraint(item: photoImageView, attribute: .trailing, relatedBy: .equal, toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        trailingConstraint.isActive = true
+        
+        let topConstraint = NSLayoutConstraint(item: photoImageView, attribute: .top, relatedBy: .equal, toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        topConstraint.isActive = true
+        
+        let bottomConstraint = NSLayoutConstraint(item: photoImageView, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        
+        
+        
     }
     
     
