@@ -133,6 +133,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         topConstraint.isActive = true
         
         let bottomConstraint = NSLayoutConstraint(item: photoImageView, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        bottomConstraint.isActive = true
+        
         
         
         
